@@ -1,4 +1,4 @@
-<p>header works!</p>
+
 <nav class="navbar navbar-inverse" style="background-color:#00008B">
     <div class="container-fluid" style="height:51px;margin-top:15px;padding-top: 20px;">
   <div class="row">
@@ -7,24 +7,14 @@
             <a [routerLink]="['/Home']" class="navbar-brand" style="color:white;padding-top:0px;">HOME</a>
       </div>
   </div>
-  <div class="col-sm-8">
-  
-  
-<!--             <ul class="nav nav-pills" role="tablist" "> 
-  <li><a [routerLink]="['/Aboutus']"  style="color:orange;">ABOUT US</a></li> 
-           
-         <li><a [routerLink]="['/STEP']"  style="color:orange;">STEP</a></li> 
-  
-               <li><a [routerLink]="['/ngo']"  style="color:orange;">NGOs</a></li>  
-  
-         <li><a [routerLink]="['/admin']"  style="color:orange;">ADMIN</a></li> 
-  
-        <li><a [routerLink]="['/faq']"  style="color:orange;">FAQ</a></li> 
-  
-      <li><a [routerLink]="['/contactus']"  style="color:orange;">Contact Us</a></li> 
-      </ul> 
-    -->
-  </div>
+  <div class="col-sm-8">   
+     <a [routerLink]="['about']" style="color:orange;">ABOUT US</a> <br />
+      <a style="color:orange;">STEP</a>
+      <a style="color:orange;">NGOs</a>
+      <a style="color:orange;">ADMIN</a>
+      <a [routerLink]="['faq']"style="color:orange;">FAQ</a>
+      <a style="color:orange;">Contact Us</a>
+   </div>
   </div>
     </div>
   </nav>
