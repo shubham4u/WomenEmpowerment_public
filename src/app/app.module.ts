@@ -6,11 +6,10 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { BodyComponent } from './body/body.component';
-import { AboutComponent } from './homeContent/about/about.component';
-import { StepComponent } from './homeContent/step/step.component';
-import { NgoComponent } from './homeContent/ngo/ngo.component';
-import { ContactComponent } from './homeContent/contact/contact.component';
-import { FaqComponent } from './homeContent/faq/faq.component';
+import { AboutComponent } from './homeComponent/about/about.component';
+import { HomeComponent } from './homeComponent/home/home.component';
+import { FAQComponent } from './homeComponent/faq/faq.component';
+import { LegislationComponent } from './homeComponent/legislation/legislation.component';
 
 
 @NgModule({
@@ -20,11 +19,9 @@ import { FaqComponent } from './homeContent/faq/faq.component';
     FooterComponent,
     BodyComponent,
     AboutComponent,
-    StepComponent,
-    NgoComponent,
-    ContactComponent,
-    FaqComponent
- 
+    HomeComponent,
+    FAQComponent,
+    LegislationComponent
   ],
   imports: [
     BrowserModule,
