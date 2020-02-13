@@ -1,20 +1,37 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-
+import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
+import { AboutComponent } from './homeComponent/about/about.component';
+import { HomeComponent } from './homeComponent/home/home.component';
+import { LegislationComponent } from './homeComponent/legislation/legislation.component';
+import { FAQComponent } from './homeComponent/faq/faq.component';
 
 const routes: Routes = [
-  { path: '', component: AppComponent },
-  { path: 'Home', component: AppComponent },
-  { path: 'header', component: HeaderComponent },
-  { path: 'footer', component: FooterComponent },
+  { 
+    path: '', 
+    component: HomeComponent 
+  },
+  { 
+    path: 'about', 
+    component: AboutComponent 
+  },
+  {
+    path: 'legislation', 
+    component: LegislationComponent  
+  },
+  {
+    path: 'faq', 
+    component: FAQComponent  
+  }
 ];
 
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes, 
+      {
+    preloadingStrategy: PreloadAllModules
+  })
+],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
