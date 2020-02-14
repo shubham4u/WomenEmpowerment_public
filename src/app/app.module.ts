@@ -10,6 +10,9 @@ import { AboutComponent } from './homeComponent/about/about.component';
 import { HomeComponent } from './homeComponent/home/home.component';
 import { FAQComponent } from './homeComponent/faq/faq.component';
 import { LegislationComponent } from './homeComponent/legislation/legislation.component';
+import { STEPModule } from './step/step.module';
+import { NGOModule } from './ngo/ngo.module';
+import { FormsModule }   from '@angular/forms';
 
 
 @NgModule({
@@ -25,7 +28,10 @@ import { LegislationComponent } from './homeComponent/legislation/legislation.co
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule,
+    AppRoutingModule,
+    STEPModule,
+    NGOModule
   ],
   providers: [],
   bootstrap: [AppComponent]
