@@ -12,7 +12,6 @@ import { FAQComponent } from './homeComponent/faq/faq.component';
 import { LegislationComponent } from './homeComponent/legislation/legislation.component';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +22,6 @@ import { LegislationComponent } from './homeComponent/legislation/legislation.co
     HomeComponent,
     FAQComponent,
     LegislationComponent
- 
   ],
   imports: [
     BrowserModule,
