@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { AboutComponent } from './homeComponent/about/about.component';
 import { HomeComponent } from './homeComponent/home/home.component';
-import { LegislationComponent } from './homeComponent/legislation/legislation.component';
 import { FAQComponent } from './homeComponent/faq/faq.component';
+import { LegislationComponent } from './homeComponent/legislation/legislation.component';
 
 const routes: Routes = [
   { 
