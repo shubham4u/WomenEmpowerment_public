@@ -10,6 +10,7 @@ import { AboutComponent } from './homeComponent/about/about.component';
 import { HomeComponent } from './homeComponent/home/home.component';
 import { FAQComponent } from './homeComponent/faq/faq.component';
 import { LegislationComponent } from './homeComponent/legislation/legislation.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { LegislationComponent } from './homeComponent/legislation/legislation.co
     AboutComponent,
     HomeComponent,
     FAQComponent,
-    LegislationComponent
+    LegislationComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
