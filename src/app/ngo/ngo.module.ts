@@ -7,13 +7,29 @@ import { FundingnormsComponent } from './ngoContent/fundingnorms/fundingnorms.co
 import { RegisterComponent } from './ngoContent/register/register.component';
 import { StatusComponent } from './ngoContent/status/status.component';
 import { NgofaqComponent } from './ngoContent/ngofaq/ngofaq.component';
-
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
-  declarations: [NgoComponent, CriteriaComponent, OrganisationComponent, FundingnormsComponent, RegisterComponent, StatusComponent, NgofaqComponent],
+  declarations: [
+    NgoComponent, 
+    CriteriaComponent, 
+    OrganisationComponent, 
+    FundingnormsComponent, 
+    RegisterComponent, 
+    StatusComponent, 
+    NgofaqComponent
+  ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule.forRoot([
+      { path: 'ngo', component: NgoComponent },
+      { path: 'ngo/criteria', component: CriteriaComponent },
+      { path: 'ngo/organisation', component: OrganisationComponent },
+      { path: 'ngo/funding', component: FundingnormsComponent },
+      { path: 'ngo/registration', component: RegisterComponent },
+      { path: 'ngo/ngofaq', component: NgofaqComponent },
+    ])
   ]
 })
 export class NGOModule { }
