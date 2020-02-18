@@ -21,3 +21,12 @@ ul {
   li a:hover {
     background-color:47008f;
   }
+
+  .center {
+    display: block;
+    margin-left: 30%;
+    margin-right: 30%;
+    width: 30%;
+  }
+
+  
