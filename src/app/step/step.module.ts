@@ -7,8 +7,17 @@ import { TrainingsectorComponent } from './stepContent/trainingsector/trainingse
 import { RegistrationComponent } from './stepContent/registration/registration.component';
 import { StatusComponent } from './stepContent/status/status.component';
 import { FaqComponent } from './stepContent/faq/faq.component';
-import { RouterModule } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
+import { HeaderComponent } from './header/header.component';
 
+const routes: Routes = [
+  { path: 'step', component: StepComponent },
+  { path: 'step/stepabout', component: AboutusComponent },
+  { path: 'step/guidelines', component: GuidelinesComponent },
+  { path: 'step/training', component: TrainingsectorComponent },
+  { path: 'step/registration', component: RegistrationComponent },
+  { path: 'step/stepfaq', component: FaqComponent },
+]
 
 @NgModule({
   declarations: [
@@ -18,18 +27,12 @@ import { RouterModule } from '@angular/router';
     TrainingsectorComponent, 
     RegistrationComponent, 
     StatusComponent, 
-    FaqComponent
+    FaqComponent, 
+    HeaderComponent
   ],
   imports: [
     CommonModule,
-    RouterModule.forRoot([
-      { path: 'step', component: StepComponent },
-      { path: 'step/stepabout', component: AboutusComponent },
-      { path: 'step/guidelines', component: GuidelinesComponent },
-      { path: 'step/training', component: TrainingsectorComponent },
-      { path: 'step/registration', component: RegistrationComponent },
-      { path: 'step/stepfaq', component: FaqComponent },
-    ])
+    RouterModule.forRoot(routes)
   ]
 })
 export class STEPModule { }
