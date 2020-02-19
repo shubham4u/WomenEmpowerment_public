@@ -9,6 +9,7 @@ import { StatusComponent } from './ngoContent/status/status.component';
 import { NgofaqComponent } from './ngoContent/ngofaq/ngofaq.component';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { HeaderComponent } from './header/header.component';
   ],
   imports: [
     CommonModule,
+    FormsModule,
     RouterModule.forRoot([
       { path: 'ngo', component: NgoComponent },
       { path: 'ngo/criteria', component: CriteriaComponent },
