@@ -10,9 +10,11 @@ import { AboutComponent } from './homeComponent/about/about.component';
 import { HomeComponent } from './homeComponent/home/home.component';
 import { FAQComponent } from './homeComponent/faq/faq.component';
 import { LegislationComponent } from './homeComponent/legislation/legislation.component';
+import { LoginComponent } from './login/login.component';
 import { STEPModule } from './step/step.module';
 import { NGOModule } from './ngo/ngo.module';
 import { FormsModule }   from '@angular/forms';
+
 
 
 @NgModule({
@@ -24,7 +26,8 @@ import { FormsModule }   from '@angular/forms';
     AboutComponent,
     HomeComponent,
     FAQComponent,
-    LegislationComponent
+    LegislationComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
