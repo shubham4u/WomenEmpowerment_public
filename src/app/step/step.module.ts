@@ -9,6 +9,7 @@ import { StatusComponent } from './stepContent/status/status.component';
 import { FaqComponent } from './stepContent/faq/faq.component';
 import { Routes, RouterModule } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   { path: 'step', component: StepComponent },
@@ -32,6 +33,7 @@ const routes: Routes = [
   ],
   imports: [
     CommonModule,
+    FormsModule,
     RouterModule.forRoot(routes)
   ]
 })
