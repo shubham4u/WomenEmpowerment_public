@@ -8,6 +8,7 @@ import { RegisterComponent } from './ngoContent/register/register.component';
 import { StatusComponent } from './ngoContent/status/status.component';
 import { NgofaqComponent } from './ngoContent/ngofaq/ngofaq.component';
 import { RouterModule } from '@angular/router';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
@@ -18,7 +19,7 @@ import { RouterModule } from '@angular/router';
     FundingnormsComponent, 
     RegisterComponent, 
     StatusComponent, 
-    NgofaqComponent
+    NgofaqComponent, HeaderComponent
   ],
   imports: [
     CommonModule,
@@ -29,6 +30,7 @@ import { RouterModule } from '@angular/router';
       { path: 'ngo/funding', component: FundingnormsComponent },
       { path: 'ngo/registration', component: RegisterComponent },
       { path: 'ngo/ngofaq', component: NgofaqComponent },
+      { path: 'ngo/ngostatus', component: StatusComponent },
     ])
   ]
 })
