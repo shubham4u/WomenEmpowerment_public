@@ -7,7 +7,7 @@ import { LegislationComponent } from './homeComponent/legislation/legislation.co
 
 const routes: Routes = [
   { 
-    path: '', 
+    path: 'home', 
     component: HomeComponent 
   },
   { 

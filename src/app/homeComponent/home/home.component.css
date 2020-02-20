@@ -1,0 +1,22 @@
+.card-text{
+    margin-left: 6%;
+    width: 30%;
+}
+.card img{
+    width: 30%;
+    height:20%;
+    margin-left: 6%;
+    
+}
+h4{
+    margin-left:6%;
+   color: brown;
+    font-weight: bold;
+}
+p{
+    color:black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.card{
+    display: inline-block;
+}
