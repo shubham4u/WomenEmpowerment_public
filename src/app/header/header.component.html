@@ -1,17 +1,18 @@
-
 <nav class="navbar navbar-inverse" style="background-color: rgb(61, 3, 61);">
   <div class="container-fluid" style="height:30px;">
-    
     <div class="navbar-header">
-    <ul class="nav nav-pills" role="tablist"  style="float:right;"> 
-    <li><a [routerLink]="['home']" class="navbar-brand">HOME</a></li>
-      <li><a [routerLink]="['/step']" class="navbar-brand">STEP</a></li>
-      <li><a [routerLink]="['/ngo']" class="navbar-brand">NGO</a></li>
-      <li><a [routerLink]="['/faq']" class="navbar-brand" >FAQ</a></li>
-      <li><a [routerLink]="['/legislation']" class="navbar-brand" >LEGISLATION</a></li>
-      <li><a [routerLink]="['/about']" class="navbar-brand" >ABOUT US</a></li> 
+    <a [routerLink]="['']" class="navbar-brand" style="color:white;">Home</a>
+    </div>
+    <ul class="nav navbar-nav"> 
+      <li><a [routerLink]="['/step']" style="color:orange;">STEP</a></li>
+      <li><a [routerLink]="['/ngo']" style="color:orange;">NGO</a></li>
+      <li><a [routerLink]="['/faq']" style="color:orange;">FAQ</a></li>
+      <li><a [routerLink]="['/legislation']" style="color:orange;">Legislation</a></li>
+      <li><a [routerLink]="['/about']"  style="color:orange;">ABOUT US</a></li> 
     </ul>
-
-</div>
-</div>
+    <ul class="nav navbar-nav navbar-right"> 
+      <li><a [routerLink]="['/signin']" id="signin" style="color:orange;">Signin</a></li>
+      <li><a [routerLink]="['/signup']" id="signup" style="color:orange;">Sign up</a></li>
+    </ul>
+  </div>
 </nav>
