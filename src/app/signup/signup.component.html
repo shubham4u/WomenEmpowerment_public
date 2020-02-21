@@ -1,0 +1,43 @@
+
+<form #mform="ngForm" (ngSubmit)="signup()" name="user-form" class="form table-responsive"
+ngNativeValidate> 
+<div class="card mt-5" style="margin:auto;width: 600px;">
+    <div class="card-body">
+      <h5 class="card-title">Register</h5>
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" class="form-control" [(ngModel)]="enduser.fullname" name="name" [pattern]="namePattern" #uname="ngModel" id="name" placeholder="User Name" required />
+        <div *ngIf="mform.errors?.pattern">
+          <span>Name Error</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" class="form-control" [(ngModel)]="enduser.email" name="email" [pattern]="emailPattern" #umail="ngModel" id="email" placeholder="Email Address" required />
+        <div *ngIf="mform.errors?.pattern">
+          <span>Email Error</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="dob">Date of Birth</label>
+        <input type="date" class="form-control"  min="01/01/2004" [(ngModel)]="enduser.userDob" name="date" [pattern]="datePattern" #date="ngModel" id="date" placeholder="Date of Birth" required />
+        <div *ngIf="mform.errors?.pattern">
+          <span>Date Error</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" [(ngModel)]="enduser.password" name="password" [pattern]="passwordPattern" #upassword="ngModel" id="password" placeholder="Password" required />
+        <span *ngIf="vpassword">Error</span>
+      </div>
+      <div class="form-group">
+        <label for="cpassword">Confirm Password</label>
+        <input type="password" class="form-control"  [(ngModel)]="cpassword" name="cpassword" id="cpassword" placeholder="Confirm Password" required />
+        <span *ngIf="vcpassword">Error</span>
+      </div>
+      <div class="signup-button">
+        <button type="submit" class="btn btn-primary">Sign up</button>
+      </div>
+    </div>
+  </div>
+  </form>
