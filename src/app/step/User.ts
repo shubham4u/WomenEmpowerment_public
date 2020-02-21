@@ -1,9 +1,12 @@
 export class User{
-    userId : String = "102";
-    name : String ;
-    email :string;
-    dob:String;
-    contact :String;
-    address :String;
-    password:string;
+    age : number = 42;
+    contact_No :number;
+    adhar_Number:number;
+    maritial_Status:string;
+    highest_Qualification:string;
+    address :string;
+    state:string;
+    district:string;
+    pincode:number;
+    userId:number=2;
 }

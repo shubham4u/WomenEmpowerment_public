@@ -1,24 +1,18 @@
-
-
-
 <nav class="navbar navbar-inverse" style="background-color:#00008B">
   <div class="container-fluid" style="height:40px;">
-    
-          <div class="navbar-header">
-        <a [routerLink]="['']" class="navbar-brand" style="color:white;">Home</a>
-   
-
-
-
-
-   <ul class="nav nav-pills" role="tablist"  style="float:right;"> 
+    <div class="navbar-header">
+    <a [routerLink]="['']" class="navbar-brand" style="color:white;">Home</a>
+    </div>
+    <ul class="nav navbar-nav"> 
       <li><a [routerLink]="['/step']" style="color:orange;">STEP</a></li>
       <li><a [routerLink]="['/ngo']" style="color:orange;">NGO</a></li>
       <li><a [routerLink]="['/faq']" style="color:orange;">FAQ</a></li>
       <li><a [routerLink]="['/legislation']" style="color:orange;">Legislation</a></li>
-      <li><a [routerLink]="['/about']" style="color:orange;">ABOUT US</a></li> 
+      <li><a [routerLink]="['/about']"  style="color:orange;">ABOUT US</a></li> 
     </ul>
-
-</div>
+    <ul class="nav navbar-nav navbar-right"> 
+      <li><a [routerLink]="['/signin']" id="signin" style="color:orange;">Signin</a></li>
+      <li><a [routerLink]="['/signup']" id="signup" style="color:orange;">Sign up</a></li>
+    </ul>
   </div>
 </nav>
