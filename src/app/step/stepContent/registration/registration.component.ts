@@ -13,7 +13,7 @@ export class RegistrationComponent implements OnInit {
   
   
   stateInfo: any[] = [];
-  countryInfo: any[] = [];
+  countryInfo: number;
   cityInfo: any[] = [];
   
 
@@ -36,7 +36,7 @@ export class RegistrationComponent implements OnInit {
   user:User = new User();
 
   ngOnInit() {
-    this.getCountries();
+    this.selected();
   }
 
   stepregister() {
@@ -46,24 +46,28 @@ export class RegistrationComponent implements OnInit {
     this.router.navigate(['/step/stepabout']);
   }
 
-  getCountries(){
+
+  selectedLevel;
+  CountryName:Array<Object> = [
+      {id: 0, CountryName: "Indian"}
+  ];
+  selected() {
+    this.onChangeCountry("India");
+  }
+
+  onChangeCountry(countryValue) {
     this.service.allCountries().
     subscribe(
       data2 => {
-        console.log(data2.Countries[100]);
-        
-        this.countryInfo=data2.Countries;
-        console.log('Data:', this.countryInfo[100]);
+        console.log(data2.Countries[100].States);
+        this.stateInfo=data2.Countries[100].States;
+        this.cityInfo=this.stateInfo[21].Cities;
+        console.log("city info",this.cityInfo);
       },
       err => console.log(err),
       () => console.log('complete')
     )
-  }
-
-  onChangeCountry(countryValue) {
-    this.stateInfo=this.countryInfo[countryValue].States;
-    this.cityInfo=this.stateInfo[0].Cities;
-    console.log(this.cityInfo);
+    
   }
 
   onChangeState(stateValue) {

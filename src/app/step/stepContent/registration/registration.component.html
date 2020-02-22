@@ -35,8 +35,8 @@ ngNativeValidate>
       </div>
       <div class="form-group">
         <label for="State">Country</label>
-        <select class="form-control"  (change)="onChangeCountry($event.target.value)"  [(ngModel)]="selectedLevel" name="country">
-          <option *ngFor="let country of countryInfo; let i = index"  value="{{i}}">{{country.CountryName}}</option>
+        <select class="form-control"  (change)="selected($event.target.value)"  [(ngModel)]="selectedLevel" name="country">
+          <option  *ngFor="let country of CountryName" [ngValue]="country" >{{country.CountryName}}</option>
         </select>
         <span *ngIf="vcountry">Error</span>
       </div>
