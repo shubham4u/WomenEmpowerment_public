@@ -1,0 +1,37 @@
+<h3>Search here for Which Programme you want Training in?</h3>
+<input type="text" placeholder="search city name" />
+
+<table  id="example" class="table table-striped table-bordered" style="width:100%">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Capacity
+            </th>
+            <th>
+                City
+            </th>
+            <th>
+                Click to Apply
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let prog of TrProgrammeList; let i=next">
+            <td>
+                {{prog.n_ProgName}}
+            </td>
+            <td>
+                {{prog.n_ProgCapacity}}    
+            </td>
+            <td>
+                {{prog.n_ProgCity}}    
+            </td>
+            <td>
+                <input type="button" value="Apply">    
+            </td>
+        </tr>
+    </tbody>
+</table>

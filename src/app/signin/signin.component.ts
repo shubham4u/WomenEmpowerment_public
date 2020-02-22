@@ -18,9 +18,9 @@ export class SigninComponent implements OnInit {
   ngOnInit() {
   }
   loginuser:LoginUser = new LoginUser();
-  singin() {
+  signin() {
     console.log(this.loginuser);
     this.service.loginData(this.loginuser);
-    this.router.navigate(['\step']);
+    this.router.navigate(['/step/registration/option']);
   }
 }

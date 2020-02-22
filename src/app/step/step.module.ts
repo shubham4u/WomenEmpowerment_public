@@ -11,6 +11,10 @@ import { Routes, RouterModule } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { OptionComponent } from './stepContent/registration/registrationDashBoard/option/option.component';
+import { TrainingprogrammeComponent } from './stepContent/registration/registrationDashBoard/trainingprogramme/trainingprogramme.component';
+import { FacilityComponent } from './stepContent/registration/registrationDashBoard/facility/facility.component';
+
 
 const routes: Routes = [
   { path: 'step', component: StepComponent },
@@ -19,6 +23,9 @@ const routes: Routes = [
   { path: 'step/training', component: TrainingsectorComponent },
   { path: 'step/registration', component: RegistrationComponent },
   { path: 'step/stepfaq', component: FaqComponent },
+  { path: 'step/registration/option', component:OptionComponent },
+  { path: 'step/registration/trprogramme', component:TrainingprogrammeComponent},
+  { path: 'step/registration/facility', component:FacilityComponent},
 ]
 
 @NgModule({
@@ -28,9 +35,9 @@ const routes: Routes = [
     GuidelinesComponent, 
     TrainingsectorComponent, 
     RegistrationComponent, 
-    StatusComponent, 
+    StatusComponent,
     FaqComponent, 
-    HeaderComponent
+    HeaderComponent, OptionComponent, TrainingprogrammeComponent, FacilityComponent
   ],
   imports: [
     CommonModule,
