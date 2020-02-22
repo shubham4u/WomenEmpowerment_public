@@ -28,7 +28,7 @@ import { SignupComponent } from './signup/signup.component';
     FAQComponent,
     LegislationComponent,
     SigninComponent,
-    SignupComponent
+    SignupComponent,
   ],
   imports: [
     BrowserModule,

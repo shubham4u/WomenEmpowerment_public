@@ -35,7 +35,8 @@ export class RegistrationComponent implements OnInit {
     console.log("user data", this.user);
     
     this.service.stepRegisterAddData(this.user);
-    this.router.navigate(['/step/stepabout']);
+    this.router.navigate(['/step/registration/option']);
+    // this.router.navigate(['/step']);
   }
 
 }
