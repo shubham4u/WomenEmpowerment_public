@@ -17,4 +17,7 @@ export class FacilityComponent implements OnInit {
       this.FacilityList = data;
     })
   }
+  FacApply() {
+    this.service.addBookProgramme();
+  }
 }

@@ -7,10 +7,26 @@ import { FundingnormsComponent } from './ngoContent/fundingnorms/fundingnorms.co
 import { RegisterComponent } from './ngoContent/register/register.component';
 import { StatusComponent } from './ngoContent/status/status.component';
 import { NgofaqComponent } from './ngoContent/ngofaq/ngofaq.component';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
+import { OptionComponent } from './ngoContent/register/ngodashboard/option/option.component';
+import { FacilityComponent } from './ngoContent/register/ngodashboard/facility/facility.component';
+import { TrainingprogrammeComponent } from './ngoContent/register/ngodashboard/trainingprogramme/trainingprogramme.component';
 
+const routes: Routes = [
+  { path: 'ngo', component: NgoComponent },
+  { path: 'ngo/criteria', component: CriteriaComponent },
+  { path: 'ngo/organisation', component: OrganisationComponent },
+  { path: 'ngo/funding', component: FundingnormsComponent },
+  { path: 'ngo/registration', component: RegisterComponent },
+  { path: 'ngo/ngofaq', component: NgofaqComponent },
+  { path: 'ngo/ngostatus', component: StatusComponent },
+
+  { path: 'ngo/registration/option', component:OptionComponent },
+  { path: 'ngo/registration/trprogramme', component:TrainingprogrammeComponent},
+  { path: 'ngo/registration/facility', component:FacilityComponent},
+]
 
 @NgModule({
   declarations: [
@@ -20,20 +36,12 @@ import { FormsModule } from '@angular/forms';
     FundingnormsComponent, 
     RegisterComponent, 
     StatusComponent, 
-    NgofaqComponent, HeaderComponent
+    NgofaqComponent, HeaderComponent, OptionComponent, FacilityComponent, TrainingprogrammeComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
-    RouterModule.forRoot([
-      { path: 'ngo', component: NgoComponent },
-      { path: 'ngo/criteria', component: CriteriaComponent },
-      { path: 'ngo/organisation', component: OrganisationComponent },
-      { path: 'ngo/funding', component: FundingnormsComponent },
-      { path: 'ngo/registration', component: RegisterComponent },
-      { path: 'ngo/ngofaq', component: NgofaqComponent },
-      { path: 'ngo/ngostatus', component: StatusComponent },
-    ])
+    RouterModule.forRoot(routes)
   ]
 })
 export class NGOModule { }
