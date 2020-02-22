@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { User } from './User';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class StepserviceService {
+  jsonurl :string = "https://raw.githubusercontent.com/sagarshirbhate/Country-State-City-Database/master/Contries.json";
 
   constructor(private http:HttpClient) { }
 
@@ -19,4 +21,7 @@ export class StepserviceService {
     })
   }
 
+  allCountries(): Observable<any>{
+    return this.http.get(this.jsonurl);
+  }
 }

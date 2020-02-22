@@ -10,6 +10,13 @@ import { StepserviceService } from '../../stepservice.service';
 })
 export class RegistrationComponent implements OnInit {
 
+  
+  
+  stateInfo: any[] = [];
+  countryInfo: any[] = [];
+  cityInfo: any[] = [];
+  
+
   constructor(private router:Router, private service: StepserviceService) { }
 
   contactno=false;
@@ -29,13 +36,39 @@ export class RegistrationComponent implements OnInit {
   user:User = new User();
 
   ngOnInit() {
+    this.getCountries();
   }
 
   stepregister() {
+    console.log(event.target);
     console.log("user data", this.user);
-    
     this.service.stepRegisterAddData(this.user);
     this.router.navigate(['/step/stepabout']);
   }
 
+  getCountries(){
+    this.service.allCountries().
+    subscribe(
+      data2 => {
+        console.log(data2.Countries[100]);
+        
+        this.countryInfo=data2.Countries;
+        console.log('Data:', this.countryInfo[100]);
+      },
+      err => console.log(err),
+      () => console.log('complete')
+    )
+  }
+
+  onChangeCountry(countryValue) {
+    this.stateInfo=this.countryInfo[countryValue].States;
+    this.cityInfo=this.stateInfo[0].Cities;
+    console.log(this.cityInfo);
+  }
+
+  onChangeState(stateValue) {
+    this.cityInfo=this.stateInfo[stateValue].Cities;
+    //console.log(this.cityInfo);
+  }
+  
 }
