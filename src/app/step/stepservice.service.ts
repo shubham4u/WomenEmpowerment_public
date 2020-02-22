@@ -28,9 +28,4 @@ export class StepserviceService {
     let trprogrammeurl="http://192.168.14.74:8686/WomenEmpowermentV2/getNgoProgReg";
     return this.http.get(trprogrammeurl);
   }
-
-  addBookProgramme() {
-
-    
-  }
 }
