@@ -34,13 +34,29 @@ ngNativeValidate>
         <span *ngIf="vaddress">Error</span>
       </div>
       <div class="form-group">
-        <label for="State">State</label>
-        <input type="text" class="form-control" [(ngModel)]="user.state" name="state" id="state" placeholder="State" required />
-        <span *ngIf="vstate">Error</span>
+        <label for="State">Country</label>
+        <select class="form-control"  (change)="selected($event.target.value)"  [(ngModel)]="selectedLevel" name="country">
+          <option  *ngFor="let country of CountryName" [ngValue]="country" >{{country.CountryName}}</option>
+        </select>
+        <span *ngIf="vcountry">Error</span>
       </div>
+      
+      <div class="form-group">
+        <label for="State">State</label>
+        <select class="form-control" name="state" [(ngModel)]="selectedLevel" (change)="onChangeState($event.target.value)">
+          <option *ngIf="stateInfo == ''" value="-1">--Select State--</option>
+          <option *ngFor="let state of stateInfo; let j = index" [ngValue]="state"  value="{{j}}">{{state.StateName}}</option>
+        </select>
+          <span *ngIf="vstate">Error</span>
+      </div>
+
+
       <div class="form-group">
         <label for="District">District</label>
-        <input type="text" class="form-control" [(ngModel)]="user.district" name="district" id="district" placeholder="District" required />
+        <select class="form-control" name="district">
+          <option *ngIf="cityInfo == ''" value="-1">--Select CIty--</option>
+        <option *ngFor="let city of cityInfo; let k = index"   value="{{k}}">{{city}}</option>
+      </select> 
         <span *ngIf="vdistrict">Error</span>
       </div>
       <div class="form-group">
