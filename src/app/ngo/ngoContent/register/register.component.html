@@ -1,27 +1,64 @@
 <app-header></app-header>
+<form #mform="ngForm" (ngSubmit)="ngoregister()" name="step-form" class="form table-responsive"
+ngNativeValidate> 
 <div class="card mt-5" style="margin:auto;width: 600px;">
     <div class="card-body">
-      <h5 class="card-title">Login</h5>
+      <h5 class="card-title">Register</h5>
       <div class="form-group">
-        <label for="name">Full Name</label>
-        <input type="text" class="form-control" id="ngoname" placeholder="Ngo Name">
+        <label for="name">NGO Name</label>
+        <input type="text" class="form-control" [(ngModel)]="ngo.ngoname" name="name" [pattern]="namePattern" #uname="ngModel" id="name" placeholder="User Name" required />
       </div>
       <div class="form-group">
-        <label for="ngoemail">Email</label>
-        <input type="text" class="form-control" id="ngoemail" placeholder="Email Address">
+        <label for="email">Email</label>
+        <input type="text" class="form-control" [(ngModel)]="ngo.ngoemail" name="email" [pattern]="emailPattern" #umail="ngModel" id="email" placeholder="Email Address" required />
       </div>
       <div class="form-group">
-        <label for="contact">Contact No. </label>
-        <input type="number" class="form-control" id="contact" placeholder="Contact Number">
+        <label for="contact">Contact No.</label>
+        <input type="number" class="form-control" [(ngModel)]="ngo.ngocontact" name="contactno" [pattern]="contactnoPattern" #udate="ngModel" id="contact" placeholder="Contact Number" required />
       </div>
       <div class="form-group">
-        <label for="certificate">NGO certificate Number</label>
-        <input type="number" class="form-control" id="certnum" placeholder="certificate number">
+        <label for="certificate">NGO </label>
+        <input type="number" class="form-control" [(ngModel)]="ngo.ngocertificateno" name="certnum" placeholder="certificate number">
       </div>
       <div class="form-group">
-        <label for="email">Password</label>
-        <input type="password" class="form-control" id="password" placeholder="Password">
+        <label for="Ngo Address">NGO Address</label>
+        <input type="text" class="form-control" [(ngModel)]="ngo.ngoaddress" name="NGO_ADDRESS" placeholder="NGO ADDRESS">
       </div>
-      <button type="submit" class="btn btn-primary" (click)="ngoregister()">Register</button>
+      <div class="form-group">
+        <label for="Ngo Incharge Name">Incharge Name</label>
+        <input type="text" class="form-control" [(ngModel)]="ngo.ngoinchargename" name="NGO_INCHARGE_NAME" placeholder="NGO INCHARGE NAME">
+      </div>
+      <div class="form-group">
+        <label for="Ngo Incharge Email">Incharge Email</label>
+        <input type="email" class="form-control" [(ngModel)]="ngo.ngoinchargeemail" name="NGO_INCHARGE_EMAIL" placeholder="NGO_INCHARGE_EMAIL">
+      </div>
+      <div class="form-group">
+        <label for="Ngo Incharge Contact No">Incharge Contact No.</label>
+        <input type="number" class="form-control" [(ngModel)]="ngo.ngoinchargecontactno" name="NGO_INCHARGE_CONTACT_NO" placeholder="NGO_INCHARGE_CONTACT_NO">
+      </div>
+      <div class="form-group">
+        <label for="Ngo Incharge Adhar No">Incharge Adhar No.</label>
+        <input type="number" class="form-control" [(ngModel)]="ngo.ngoinchargeadharno" name="NGO_INCHARGE_ADHAR_NO" placeholder="NGO_INCHARGE_ADHAR_NO">
+      </div>
+      <div class="form-group">
+        <label for="Ngo Address">Incharge Address</label>
+        <input type="text" class="form-control" [(ngModel)]="ngo.ngoinchargeaddress" name="NGO_INCHARGE_ADDRESS" placeholder="NGO_INCHARGE_ADDRESS">
+      </div>
+      <div class="form-group">
+        <label for="Ngo Establishment Year">Ngo Establishment Year</label>
+        <input type="date" class="form-control" [(ngModel)]="ngo.ngoestablishmentyear" name="NGO_ESTABLISHMENT_YEAR" [pattern]="datePattern" #ngodate="ngModel" placeholder="NGO_ESTABLISHMENT_YEAR">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" [(ngModel)]="ngo.ngopassword" name="password" [pattern]="passwordPattern" #upassword="ngModel" id="password" placeholder="Password" required />
+        <span *ngIf="vpassword">Error</span>
+      </div>
+      <div class="form-group">
+        <label for="cpassword">Confirm Password</label>
+           <input type="password" class="form-control"  [(ngModel)]="cpassword" name="cpassword" id="cpassword" placeholder="Confirm Password" required />
+        <span *ngIf="vcpassword">Error</span>
+      </div>
+      <button type="submit" class="btn btn-primary">Register</button>
     </div>
   </div>
+</form>

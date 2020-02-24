@@ -13,7 +13,9 @@ import { LegislationComponent } from './homeComponent/legislation/legislation.co
 import { STEPModule } from './step/step.module';
 import { NGOModule } from './ngo/ngo.module';
 import { FormsModule }   from '@angular/forms';
-
+import { HttpClientModule } from '@angular/common/http';
+import { SigninComponent } from './signin/signin.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -24,14 +26,17 @@ import { FormsModule }   from '@angular/forms';
     AboutComponent,
     HomeComponent,
     FAQComponent,
-    LegislationComponent
+    LegislationComponent,
+    SigninComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
     STEPModule,
-    NGOModule
+    NGOModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

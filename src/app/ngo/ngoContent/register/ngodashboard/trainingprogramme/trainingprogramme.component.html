@@ -1,0 +1,24 @@
+<h3>Please fill in this form to register the Training Programme</h3>
+<form #mform="ngForm" (ngSubmit)="ngotrprgregister()" name="step-form" class="form table-responsive"
+ngNativeValidate> 
+<div class="card mt-5" style="margin:auto;width: 600px;">
+    <div class="card-body">
+      <h5 class="card-title">Register</h5>
+      <hr>
+      <div class="form-group">
+        <label for="name">Training Programme Name</label>
+        <input type="text" class="form-control" [(ngModel)]="ngotrprg.n_ProgName" name="name" [pattern]="namePattern" #uname="ngModel" id="name" placeholder="Training Programme Name" required />
+      </div>
+      <div class="form-group">
+        <label for="name">Training Programme Capacity</label>
+        <input type="number" class="form-control" [(ngModel)]="ngotrprg.n_ProgCapacity" name="name" [pattern]="namePattern" #uname="ngModel" id="name" placeholder="Training Programme Capacity" required />
+      </div>
+      <div class="form-group">
+        <label for="name">Training Programme City</label>
+        <input type="text" class="form-control" [(ngModel)]="ngotrprg.n_ProgCity" name="name" [pattern]="namePattern" #uname="ngModel" id="name" placeholder="Training Programme City" required />
+      </div>
+      <button type="submit" class="btn btn-primary">Add</button>
+      <hr>
+    </div>
+</div>
+</form>
