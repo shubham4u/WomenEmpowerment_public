@@ -1,0 +1,20 @@
+.navbar{
+    overflow: auto;
+}
+  .navbar-header a {
+    text-align: right;
+    padding: 20px;
+    color: white;
+    float:right;
+  
+   height: 5px;
+   
+    
+    
+   
+  }
+  .navbar-header a:hover {
+    color:black;
+    background-color:pink;
+  }
+  
