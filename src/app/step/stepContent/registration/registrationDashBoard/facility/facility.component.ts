@@ -18,6 +18,6 @@ export class FacilityComponent implements OnInit {
     })
   }
   FacApply() {
-    this.service.addBookProgramme();
+    // this.service.addBookProgramme();
   }
 }

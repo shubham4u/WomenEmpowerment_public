@@ -15,7 +15,6 @@ export class StepserviceService {
     let url="http://192.168.14.74:8686/WomenEmpowermentV2/poststepLogList";
     this.http.post(url, user).subscribe((data)=>{
       console.log("data",data);
-      
     })
   }
 
@@ -29,8 +28,12 @@ export class StepserviceService {
     return this.http.get(trprogrammeurl);
   }
 
-  addBookProgramme() {
+  // addBookProgramme() {
 
-    
-  }
+  //   console.log("karaich rahilay");
+  //   // let url="http://192.168.14.74:8686/WomenEmpowermentV2/poststepLogList";
+  //   // this.http.post(url, user).subscribe((data)=>{
+  //   //   console.log("data",data);
+  //   // })
+  // }
 }
