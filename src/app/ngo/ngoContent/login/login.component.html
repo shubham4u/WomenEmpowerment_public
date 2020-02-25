@@ -1,0 +1,23 @@
+<app-header></app-header>
+
+<form #mform="ngForm" (ngSubmit)="signin()" name="user-form" class="form table-responsive"
+ngNativeValidate> 
+<div class="card mt-5" style="margin:auto;width: 600px;">
+    <div class="card-body">
+      <h5 class="card-title">Register</h5>
+      
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" class="form-control" [(ngModel)]="login.ngoemail" name="email" id="email" placeholder="Email Address" required />
+      </div>
+      
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" [(ngModel)]="login.ngopassword" name="password" id="password" placeholder="Password" required />
+      </div>
+      <div class="signin-button">
+        <button type="submit" class="btn btn-primary">Sign In</button>
+      </div>
+    </div>
+  </div>
+  </form>

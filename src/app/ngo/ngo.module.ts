@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { OptionComponent } from './ngoContent/register/ngodashboard/option/option.component';
 import { FacilityComponent } from './ngoContent/register/ngodashboard/facility/facility.component';
 import { TrainingprogrammeComponent } from './ngoContent/register/ngodashboard/trainingprogramme/trainingprogramme.component';
+import { LoginComponent } from './ngoContent/login/login.component';
 
 const routes: Routes = [
   { path: 'ngo', component: NgoComponent },
@@ -22,7 +23,7 @@ const routes: Routes = [
   { path: 'ngo/registration', component: RegisterComponent },
   { path: 'ngo/ngofaq', component: NgofaqComponent },
   { path: 'ngo/ngostatus', component: StatusComponent },
-
+  {path:  'ngo/login',component:LoginComponent},
   { path: 'ngo/registration/option', component:OptionComponent },
   { path: 'ngo/registration/trprogramme', component:TrainingprogrammeComponent},
   { path: 'ngo/registration/facility', component:FacilityComponent},
@@ -35,6 +36,7 @@ const routes: Routes = [
     OrganisationComponent, 
     FundingnormsComponent, 
     RegisterComponent, 
+    LoginComponent,
     StatusComponent, 
     NgofaqComponent, HeaderComponent, OptionComponent, FacilityComponent, TrainingprogrammeComponent
   ],

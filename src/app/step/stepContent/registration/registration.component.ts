@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { User } from '../../User';
 import { Router, RouterLink } from '@angular/router';
 import { StepserviceService } from '../../stepservice.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-registration',
@@ -10,7 +11,7 @@ import { StepserviceService } from '../../stepservice.service';
 })
 export class RegistrationComponent implements OnInit {
 
-  constructor(private router:Router, private service: StepserviceService) { }
+  constructor(private router:Router, private service: StepserviceService, private http: HttpClient) { }
 
   contactno=false;
   adharno=false;
@@ -27,16 +28,17 @@ export class RegistrationComponent implements OnInit {
   stepdatePattern = "/^([0-9]{2})-([0-9]{2})-([0-9]{4})$/";
 
   user:User = new User();
-
+  
   ngOnInit() {
+    
   }
 
   stepregister() {
+    this.user.userId = parseInt(sessionStorage.getItem("stepdata"));
     console.log("user data", this.user);
     
     this.service.stepRegisterAddData(this.user);
     this.router.navigate(['/step/registration/option']);
-    // this.router.navigate(['/step']);
   }
 
 }
