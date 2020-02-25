@@ -14,7 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { OptionComponent } from './stepContent/registration/registrationDashBoard/option/option.component';
 import { TrainingprogrammeComponent } from './stepContent/registration/registrationDashBoard/trainingprogramme/trainingprogramme.component';
 import { FacilityComponent } from './stepContent/registration/registrationDashBoard/facility/facility.component';
-
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 const routes: Routes = [
   { path: 'step', component: StepComponent },
@@ -41,6 +41,7 @@ const routes: Routes = [
   ],
   imports: [
     CommonModule,
+    Ng2SearchPipeModule,
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot(routes)
