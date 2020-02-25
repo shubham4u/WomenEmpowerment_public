@@ -18,6 +18,16 @@ export class FacilityComponent implements OnInit {
     })
   }
   FacApply() {
-    // this.service.addBookProgramme();
+    // sessionStorage.setItem("userid",userid);
+    let appiedfacdata = {
+     
+      toString() {
+             var jsondata = `{nfacId:${this.nfacId}, }`;
+        return jsondata;
+      }
+    };
+    console.log(appiedfacdata);
+    
+    this.service.addBookFacility(appiedfacdata);
   }
 }
