@@ -25,15 +25,15 @@
         
     }
     
-    .tagname h5 {
+    .tagname h6 {
         font-family: 'Lobster', cursive;
         display:inline;
-        margin-left: -16%;
+        margin-left: -30%;
         padding-left:30%;
         padding-top: 60%;
         padding-bottom: 10px;
         font-style: italic;
         height:2%;
-        color: purple;
+        color: rgb(228, 122, 228);
         
     }

@@ -30,18 +30,15 @@ export class StepserviceService {
     return this.http.get(trprogrammeurl);
   }
 
-  // addBookProgramme() {
-
-  //   console.log("karaich rahilay");
-  //   // let url="http://192.168.14.74:8686/WomenEmpowermentV2/poststepLogList";
-  //   // this.http.post(url, user).subscribe((data)=>{
-  //   //   console.log("data",data);
-  //   // })
-  // }
+  addBookProgramme(appliedprogdata) {
+    let url="http://192.168.14.74:8686/WomenEmpowermentV2/postProgBooking";
+    this.http.post(url, appliedprogdata).subscribe((data)=>{
+      console.log("data",data);
+    })
+  }
 
    addBookFacility(appliedfacdata) {
-
-    let url="http://192.168.14.74:8686/WomenEmpowermentV2/postFacbooking";
+    let url="http://192.168.14.74:8686/WomenEmpowermentV2/postFacBooking";
     this.http.post(url, appliedfacdata).subscribe((data)=>{
       console.log("data",data);
     })
