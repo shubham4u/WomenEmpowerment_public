@@ -1,0 +1,51 @@
+.embroidery {
+    background-image:url(/assets/tri3.jpg);
+    background-repeat:no-repeat;
+    color: white;
+    height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  font-size: 15px;
+}
+
+h2{
+    text-align: center;
+    font-style: oblique;
+
+    
+}
+
+h3{
+    text-align: center;
+    font-style: oblique;  
+    background-color: white; 
+    color: blue;
+}
+
+.tailoring {
+ 
+    background-repeat:no-repeat;
+   background-color: thistle;
+    height: 600px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  font-size: 15px;
+}
+
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+  
+  
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }

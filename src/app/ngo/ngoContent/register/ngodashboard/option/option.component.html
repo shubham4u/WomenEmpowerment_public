@@ -1,4 +1,20 @@
-<h3>Choose Your programme</h3>
-
-<input type="button" [routerLink]="['/ngo/registration/trprogramme']"  value="Add Training Programme" />
-<input type="button" [routerLink]="['/ngo/registration/facility']"  value="Add Facility" />
+<table align="center" width="60%" bgcolor="#00FF00">
+    <tr height="60">
+        <th style=" background-color: grey;color:white">Type of programmes</th>
+        <th style=" background-color: grey;color:white">Choose programme</th>
+        
+    </tr>
+            <tr>
+                <td>
+                 Training programme
+                </td>
+                <td width="70%" height="60"><input type="button" [routerLink]="['/ngo/registration/trprogramme']"  value="Add Training Programme" style="background-color:green;color:white;" /> </td>
+                
+            </tr>
+            <tr>
+                <td>
+               Facility            </td>
+                <td height="60"><input type="button" [routerLink]="['/ngo/registration/facility']"  value="Add Facility" style="background-color:green;color:white;" />
+                </td>
+            </tr>
+</table>
