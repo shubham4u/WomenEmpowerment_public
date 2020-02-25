@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { LoginUser } from './loginuser';
 import { Router, RouterLink } from '@angular/router';
 import { AppserviceService } from '../appservice.service';
+import { StepserviceService } from '../step/stepservice.service';
 
 @Component({
   selector: 'app-signin',
@@ -10,6 +11,7 @@ import { AppserviceService } from '../appservice.service';
 })
 export class SigninComponent implements OnInit {
   loginuser: LoginUser = new LoginUser();
+  stepservice: any;
 
   constructor(private router: Router, private service: AppserviceService) { }
 
@@ -17,6 +19,8 @@ export class SigninComponent implements OnInit {
   }
 
   signin() {
+    console.log(sessionStorage.getItem("stepdata"));
+    
     this.service.loginData(this.loginuser)
       .subscribe(
         user => {
@@ -33,5 +37,6 @@ export class SigninComponent implements OnInit {
         }
       )
 
+      
   }
 }

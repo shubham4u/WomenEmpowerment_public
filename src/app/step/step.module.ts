@@ -15,6 +15,7 @@ import { OptionComponent } from './stepContent/registration/registrationDashBoar
 import { TrainingprogrammeComponent } from './stepContent/registration/registrationDashBoard/trainingprogramme/trainingprogramme.component';
 import { FacilityComponent } from './stepContent/registration/registrationDashBoard/facility/facility.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { NgoComponent } from './stepContent/ngo/ngo.component';
 
 const routes: Routes = [
   { path: 'step', component: StepComponent },
@@ -37,7 +38,7 @@ const routes: Routes = [
     RegistrationComponent, 
     StatusComponent,
     FaqComponent, 
-    HeaderComponent, OptionComponent, TrainingprogrammeComponent, FacilityComponent
+    HeaderComponent, OptionComponent, TrainingprogrammeComponent, FacilityComponent, NgoComponent
   ],
   imports: [
     CommonModule,

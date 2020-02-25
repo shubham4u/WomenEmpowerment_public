@@ -29,7 +29,7 @@ export class AppserviceService {
   }
 
   loginData(loginuser: LoginUser): Observable<any> {
-    let url = "http://192.168.12.134:8282/WomenEmpowermentV2/validateUser";
+    let url = "http://192.168.14.74:8686/WomenEmpowermentV2/validateUser";
     return this.http.post(url, loginuser)
   }
 
@@ -53,7 +53,7 @@ export class AppserviceService {
     return this.userSubject.asObservable();
   }
 
-  logOutUser(){
+  logOutUser() {
     localStorage.removeItem("user");
     this.userSubject.next(undefined);
   }

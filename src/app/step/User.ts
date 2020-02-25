@@ -8,5 +8,5 @@ export class User{
     state:string;
     district:string;
     pincode:number;
-    userId:number=11;
+    userId:number;
 }
