@@ -9,6 +9,8 @@ export class StepserviceService {
 
   constructor(private http:HttpClient) { }
 
+  appliedfacdata: any;
+
   stepRegisterAddData(user: User) {
     alert('checkId is changed or not')
     console.log(JSON.stringify(user));
@@ -36,4 +38,12 @@ export class StepserviceService {
   //   //   console.log("data",data);
   //   // })
   // }
+
+   addBookFacility(appliedfacdata) {
+
+    let url="http://192.168.14.74:8686/WomenEmpowermentV2/postFacbooking";
+    this.http.post(url, appliedfacdata).subscribe((data)=>{
+      console.log("data",data);
+    })
+  }
 }
