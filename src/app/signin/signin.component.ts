@@ -9,18 +9,29 @@ import { AppserviceService } from '../appservice.service';
   styleUrls: ['./signin.component.css']
 })
 export class SigninComponent implements OnInit {
+  loginuser: LoginUser = new LoginUser();
 
-  constructor(private router:Router, private service: AppserviceService) { }
-
-  email=false;
-  password=false;
+  constructor(private router: Router, private service: AppserviceService) { }
 
   ngOnInit() {
   }
-  loginuser:LoginUser = new LoginUser();
+
   signin() {
-    console.log(this.loginuser);
-    this.service.loginData(this.loginuser);
-    this.router.navigate(['/step/registration/option']);
+    this.service.loginData(this.loginuser)
+      .subscribe(
+        user => {
+          if (user) {
+            this.service.setUser(user);
+            this.router.navigate(['/step/registration/option']);
+          }
+          else {
+            alert("user Not exists")
+          }
+        },
+        err => {
+          alert("API call error")
+        }
+      )
+
   }
 }
