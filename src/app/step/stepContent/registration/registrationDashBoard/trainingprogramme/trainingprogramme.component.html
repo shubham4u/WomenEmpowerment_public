@@ -5,7 +5,7 @@
     <thead>
         <tr>
             <th>
-                Name
+                Name of Programme
             </th>
             <th>
                 Capacity
@@ -30,7 +30,7 @@
                 {{prog.n_ProgCity}}    
             </td>
             <td>
-                <input type="button" value="Apply">    
+                <input type="button" value="Apply" (click)="appliedprogramme(prog.n_ProgId)" />    
             </td>
         </tr>
     </tbody>
